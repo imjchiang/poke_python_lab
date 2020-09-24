@@ -8,11 +8,22 @@ class Pokemon:
     # PART 1 ########### TO DO ###################
     # Initialize the Pokemon Class with an __init__() method
     # This class takes in 10 variable parameters in addition to self
-    #
     # HINT: Take a look at some of the instances of this pokemon class below along with some of the pre-built
     # class methods to get an idea of what you might want to call these variables along with their ordering
     # to call  these parameters
-    # 
+
+    def __init__(self, name, type1, type2, hp, ph_attack, defense, sp_attack, sp_defense, speed, moves):
+        self.name = name,
+        self.type1 = type1,
+        self.type2 = type2,
+        self.hp = hp,
+        self.ph_attack = ph_attack,
+        self.defense = defense,
+        self.sp_attack = sp_attack,
+        self.sp_defense = sp_defense,
+        self.speed = speed,
+        self.moves = moves,
+
     # Define a revive(???, ???): method for the Pokemon class. This will allow pokemon to revive after a battle
     # later on in the simulation
     #
@@ -21,7 +32,7 @@ class Pokemon:
     #
     # The revive function is also one line. It starts with self.__init__() which has strictly 10 variable parameters
     # One variable parameter passed into this function is not like the others, what might it be???
-    
+
 
 
     ################ POKEMON ATTACK METHOD ################
