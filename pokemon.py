@@ -11,28 +11,27 @@ class Pokemon:
     # HINT: Take a look at some of the instances of this pokemon class below along with some of the pre-built
     # class methods to get an idea of what you might want to call these variables along with their ordering
     # to call  these parameters
-
-    def __init__(self, name, type1, type2, hp, ph_attack, defense, sp_attack, sp_defense, speed, moves):
-        self.name = name,
-        self.type1 = type1,
-        self.type2 = type2,
-        self.hp = hp,
-        self.ph_attack = ph_attack,
-        self.defense = defense,
-        self.sp_attack = sp_attack,
-        self.sp_defense = sp_defense,
-        self.speed = speed,
-        self.moves = moves,
+    def __init__(self, name, hp, ph_attack, defense, sp_attack, sp_defense, speed, type1, type2, moves):
+        self.name = name
+        self.type1 = type1
+        self.type2 = type2
+        self.hp = hp
+        self.ph_attack = ph_attack
+        self.defense = defense
+        self.sp_attack = sp_attack
+        self.sp_defense = sp_defense
+        self.speed = speed
+        self.moves = moves
 
     # Define a revive(???, ???): method for the Pokemon class. This will allow pokemon to revive after a battle
     # later on in the simulation
-    #
     # HINT: the revive(???, ???): function takes in one other parameter besides self. To get a better idea of 
     # what the ONE other parameter is, take a look at the Save Class below
-    #
     # The revive function is also one line. It starts with self.__init__() which has strictly 10 variable parameters
     # One variable parameter passed into this function is not like the others, what might it be???
 
+    def revive(self, hp):
+        self.__init__(self.name, hp, self.ph_attack, self.defense, self.sp_attack, self.sp_defense, self.speed, self.type1, self.type2, self.moves)
 
 
     ################ POKEMON ATTACK METHOD ################
@@ -646,9 +645,27 @@ xerneas = Pokemon('Xerneas', 394, 268, 226, 397, 232, 297, 'fairy', 'none',
 
 # 1st new instance
 
+lickitung = Pokemon('Lickitung', 358, 173, 198, 156, 204, 9000, 'normal', 'none',
+ [{'name': 'lick', 'movetype': 'ghost', 'damage': 900, 'phys_special': 'physical'},
+ {'name': 'all-out pummeling', 'movetype': 'fighting', 'damage': 200, 'phys_special': 'physical'},
+ {'name': 'power whip', 'movetype': 'grass', 'damage': 120, 'phys_special': 'physical'},
+ {'name': 'YEET', 'movetype': 'normal', 'damage': 900, 'phys_special': 'physical'}])
+
 # 2nd new instance
 
+clefable = Pokemon('Clefable', 332, 239, 182, 226, 237, 197, 'fairy', 'none',
+ [{'name': 'cosmic power', 'movetype': 'psychic', 'damage': 1, 'phys_special': 'physical'},
+ {'name': 'stored power', 'movetype': 'psychic', 'damage': 20, 'phys_special': 'physical'},
+ {'name': 'moonlight', 'movetype': 'fairy', 'damage': 900, 'phys_special': 'physical'},
+ {'name': 'minimize', 'movetype': 'normal', 'damage': 900, 'phys_special': 'physical'}])
+
 # 3rd new instance
+
+jirachi = Pokemon('Jirachi', 342, 299, 236, 236, 259, 269, 'normal', 'none',
+ [{'name': 'body slam', 'movetype': 'normal', 'damage': 85, 'phys_special': 'physical'},
+ {'name': 'iron head', 'movetype': 'steel', 'damage': 80, 'phys_special': 'physical'},
+ {'name': 'wish', 'movetype': 'normal', 'damage': 500, 'phys_special': 'physical'},
+ {'name': 'protect', 'movetype': 'normal', 'damage': 900, 'phys_special': 'physical'}])
 
 
 ########################################################################################
